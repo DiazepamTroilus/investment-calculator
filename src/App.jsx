@@ -48,21 +48,23 @@ function App() {
   return (
     <>
       <Header></Header>
-      <div id="user-input" className="input-group">
-        <InputLabel
-          title={'Initial Investment'}
-          onInput={inputHandler}
-        ></InputLabel>
-        <InputLabel
-          title={'Annual Investment'}
-          onInput={input2Handler}
-        ></InputLabel>
-        <InputLabel
-          title={'EXPECTED RETURN'}
-          onInput={input3Handler}
-        ></InputLabel>
-        <InputLabel title={'DURATION'} onInput={input4Handler} />
-      </div>
+      <section id="user-input">
+        <div className="input-group">
+          <InputLabel
+            title={'Initial Investment'}
+            onInput={inputHandler}
+          ></InputLabel>
+          <InputLabel
+            title={'Annual Investment'}
+            onInput={input2Handler}
+          ></InputLabel>
+          <InputLabel
+            title={'EXPECTED RETURN'}
+            onInput={input3Handler}
+          ></InputLabel>
+          <InputLabel title={'DURATION'} onInput={input4Handler} />
+        </div>
+      </section>
       <TableResult data={calculateInvestmentResults(iniData)}></TableResult>
     </>
   );
